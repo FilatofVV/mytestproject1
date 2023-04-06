@@ -36,8 +36,12 @@ jobs:
     
     - name: List current folder
       run: ls -la
+  
+    - name: Git clene my repo
+      uses: actions/checkout@v1  
         
-   
+    - name: List current folder
+      run: ls -la
    
    
    
@@ -51,3 +55,10 @@ jobs:
       
       - name: Printing Deployment package
         run: echo "Deploy packege name is ${{ env.DEPLOY_PACKAGE_NAME }}"
+        
+      - name: Lets test some packeges if they are here 1
+        run: aws --version
+      
+      - name: Lets test some packeges if they are here 2
+        run: zip
+        
