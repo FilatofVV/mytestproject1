@@ -26,7 +26,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Print Hello Message in testing
-      run : echo "Hello World from Testing"
+      run : | 
+         echo "Hello World from Testing"
     
     - name: Execute few commands
       run: |
@@ -40,8 +41,10 @@ jobs:
      runs-on: ubuntu-latest 
      steps:
       - name: Print Hello Message in deploy
-        run : echo "Hello World from Deploy job"  
+        run : 
+            echo "Hello World from Deploy job"  
       
       
       - name: Printing Deployment package
-        run: echo"Deploy packege name is ${{ env.DEPLOY_PACKAGE_NAME }}"
+        run: 
+            echo"Deploy packege name is ${{ env.DEPLOY_PACKAGE_NAME }}"
