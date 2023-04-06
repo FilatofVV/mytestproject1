@@ -4,7 +4,7 @@
 #-------------------------------
 name: My-GitHubActions-Basics
 env: 
-  APPICATION_NAME       : "My Flask"
+  APPLICATION_NAME      : "My Flask"
   DEPLOY_PACKAGE_NAME   : "flask deploy-file-ver-${{ github.sha }}"
     
 # Controls when the workflow will run
@@ -32,7 +32,7 @@ jobs:
       run: |
          echo: "Hello Message1"
          echo: "Hello Message2"
-         echo: "Application name: ${{ env.APPICATION_NAME }}"
+         echo: "Application name: ${{ env.APPLICATION_NAME }}"
    
    
    my_deploy:
